@@ -1,0 +1,243 @@
+/* Importa a fonte Orbitron do Google Fonts para um estilo futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: 'Orbitron', sans-serif;
+    /* Define a fonte padrão para um estilo futurista */
+    background-color: #1A1A2E;
+    /* Cor de fundo: Azul escuro profundo */
+    color: #EAEAEA;
+    /* Cor do texto: Cinza claro */
+    display: flex;
+    /* Usa Flexbox para layout */
+    flex-direction: column;
+    /* Alinha os itens na vertical */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens verticalmente */
+    height: 100vh;
+    /* Preenche a altura total da viewport */
+    margin: 0;
+    /* Remove a margem padrão */
+    padding: 0;
+    /* Remove o padding padrão */
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 3rem;
+    /* Tamanho da fonte */
+    color: #0EF9FF;
+    /* Cor do texto: Neon azul */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    letter-spacing: 0.2rem;
+    /* Espaçamento entre letras */
+    text-shadow: 0 0 2px #0EF9FF;
+    /* Reduz o efeito de sombra neon */
+}
+
+/* Estiliza as seções da página */
+section {
+    display: flex;
+    /* Usa Flexbox para layout */
+    flex-direction: column;
+    /* Alinha os itens na vertical */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    margin-bottom: 3rem;
+    /* Espaçamento abaixo de cada seção */
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 30rem;
+    /* Largura dos inputs */
+    border: 2px solid #FF0054;
+    /* Borda: Neon rosa */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 0.5rem;
+    /* Borda arredondada */
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo dos inputs */
+    color: #FFFFFF;
+    /* Cor do texto: Branco */
+    background-color: #202040;
+    /* Cor de fundo do input: Azul escuro */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    text-shadow: none;
+    /* Remove a sombra do texto para maior clareza */
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.5rem;
+    /* Espaçamento interno do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 0.5rem;
+    /* Borda arredondada */
+    background-color: #FF0054;
+    /* Cor de fundo do botão: Neon rosa */
+    color: #FFFFFF;
+    /* Cor do texto do botão: Branco */
+    font-size: 1.2rem;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    text-shadow: none;
+    /* Remove a sombra do texto para maior clareza */
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #0EF9FF;
+    /* Muda a cor de fundo para Neon azul ao passar o mouse */
+    box-shadow: 0 0 8px #0EF9FF, 0 0 12px #0EF9FF;
+    /* Suaviza o efeito neon */
+}
+
+/* Estiliza a caixa de resultados da pesquisa inicialmente oculta */
+.resultados-pesquisa {
+    display: none;
+    /* Inicialmente oculta */
+    width: 60rem;
+    /* Largura máxima da caixa de resultados */
+    height: 46vh;
+    /* Altura máxima da caixa de resultados */
+    overflow-y: auto;
+    /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem;
+    /* Espaçamento acima da caixa de resultados */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 0.6rem;
+    /* Borda arredondada */
+    background-color: #202040;
+    /* Cor de fundo da caixa de resultados: Azul escuro */
+    color: #FFFFFF;
+    /* Cor do texto: Branco */
+    box-shadow: none;
+    /* Remove a sombra ao redor da caixa */
+}
+
+/* Classe para exibir a caixa de resultados quando houver resultados */
+.resultados-visiveis {
+    display: block;
+    /* Exibe a caixa de resultados */
+}
+
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto ao topo */
+    background: #2E2E52;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #0EF9FF;
+    gap: 20px; /* Espaçamento entre imagem e texto */
+}
+
+.item-resultado img {
+    flex-shrink: 0; /* Impede a imagem de encolher */
+    width: 150px; /* Define um tamanho fixo para a imagem */
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.item-resultado .texto {
+    flex-grow: 1; /* Faz o texto ocupar o restante do espaço */
+}
+
+.item-resultado .texto h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #FF0054;
+    text-shadow: 0 0 2px #FF0054;
+}
+
+.item-resultado .texto p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #EAEAEA;
+}
+
+.item-resultado .texto a {
+    color: #FF0054;
+    text-decoration: none;
+}
+
+.item-resultado .texto a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    color: #0EF9FF;
+    /* Cor do texto: Neon azul */
+    text-shadow: 0 0 2px #0EF9FF;
+    /* Suaviza a sombra neon */
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
+    color: #FF0054;
+    /* Cor do texto dos links: Neon rosa */
+    text-shadow: none;
+    /* Remove a sombra para maior clareza */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #EAEAEA;
+    /* Cor do texto: Cinza claro */
+    margin: 0.5rem 0;
+    /* Margem acima e abaixo */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    text-shadow: none;
+    /* Remove o brilho do texto */
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #0EF9FF;
+    /* Cor de fundo do rodapé: Neon azul */
+    color: #1A1A2E;
+    /* Cor do texto: Azul escuro profundo */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    padding: 0.5rem;
+    /* Espaçamento interno */
+    width: 100%;
+    /* Largura total da página */
+    position: absolute;
+    /* Posiciona o rodapé */
+    bottom: 0;
+    /* Alinha ao fundo da página */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    box-shadow: none;
+    /* Remove a sombra neon */
+}
