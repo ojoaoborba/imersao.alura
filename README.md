@@ -14,6 +14,7 @@ Este projeto é um site interativo que ajuda os usuários a encontrar filmes cl�
 - **HTML5**: Estrutura do site.
 - **CSS3**: Estilização, incluindo flexbox para layout responsivo e efeitos visuais.
 - **JavaScript**: Manipulação do DOM, filtros de pesquisa e interação do usuário.
+- **Google Gemini**: Criatividade e auxilio em muitos âmbitos importantíssimo para ajuda em muitas partes por dodos os codigos
 
 ## Como Usar 📖
 
